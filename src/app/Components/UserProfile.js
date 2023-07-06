@@ -71,7 +71,7 @@ const UserProfile = ({ userData }) => {
           
         </VStack>
       </Flex>
-      
+      <Repos reposUrl = {userData.repos_url} />
     </>
   );
 };
