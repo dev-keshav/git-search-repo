@@ -1,6 +1,6 @@
 "use client";
 import { Avatar, Badge, Button, Flex, VStack, Text, Box } from "@chakra-ui/react";
-
+import Repos from "./Repos";
 
 const UserProfile = ({ userData }) => {
   return (
@@ -71,7 +71,7 @@ const UserProfile = ({ userData }) => {
           
         </VStack>
       </Flex>
-      
+      <Repos reposUrl = {userData.repos_url} />
     </>
   );
 };
