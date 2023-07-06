@@ -1,6 +1,7 @@
 "use client";
 import { Avatar, Badge, Button, Flex, VStack, Text, Box } from "@chakra-ui/react";
 
+
 const UserProfile = ({ userData }) => {
   return (
     <>
@@ -12,8 +13,8 @@ const UserProfile = ({ userData }) => {
         padding={8}
       >
         <VStack gap={5}>
-          <Avatar size={"xl"} name={userData.name} src={userData.avatar_url} />
-          <Button colorScheme="whatsapp">
+          <Avatar size={"2xl"} name={userData.name} src={userData.avatar_url} />
+          <Button size={"sm"} colorScheme="whatsapp">
             <a href={userData.html_url} target="_blank">
               View Profile
             </a>
@@ -47,10 +48,30 @@ const UserProfile = ({ userData }) => {
                 </Text>
                 {userData.company || "Not Specified"}
             </Text>
+            <Text fontSize={'md'}>
+                <Text as={"span"} fontWeight={"bold"} color={"green.200"} mr={1}>
+                    Location: 
+                </Text>
+                {userData.location || "Not Specified"}
+            </Text>
+            <Text fontSize={'md'}>
+                <Text as={"span"} fontWeight={"bold"} color={"green.200"} mr={1}>
+                    Blog/Website: 
+                </Text>
+                {userData.blog ? (<a href={userData.blog} target="_blank">{userData.blog}</a>) : "Not Specified"}
+            </Text>
+            <Text fontSize={'md'}>
+                <Text as={"span"} fontWeight={"bold"} color={"green.200"} mr={1}>
+                    Member since: 
+                </Text>
+                {/* {userData.created_at} */}
+                {new Date(userData.created_at).toLocaleDateString()}
+            </Text>
           </Box>
           
         </VStack>
       </Flex>
+      
     </>
   );
 };
