@@ -17,7 +17,7 @@ export default function Home() {
       </Text>
       <Search setUserData={(res) => setUserData(res)} setLoading={setLoading} />
 
-      {userData && <UserProfile userData={setUserData}/>}
+      {userData && <UserProfile userData={userData}/>}
     </Container>
   );
 }
