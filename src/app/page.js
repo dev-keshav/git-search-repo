@@ -13,7 +13,7 @@ export default function Home() {
     <Container maxW="container.lg">
       <Navbar />
       <Text textAlign={"Center"} my={4}>
-        Search Users of GitHub
+        Search Users on Github
       </Text>
       <Search setUserData={(res) => setUserData(res)} setLoading={setLoading} />
 
