@@ -43,25 +43,25 @@ const UserProfile = ({ userData }) => {
           </Text>
           <Box>
             <Text fontSize={'md'}>
-                <Text as={"span"} fontWeight={"bold"} color={"green.200"} mr={1}>
+                <Text as={"span"} fontWeight={"bold"} color={"#257734"} mr={1}>
                     Company: 
                 </Text>
                 {userData.company || "Not Specified"}
             </Text>
             <Text fontSize={'md'}>
-                <Text as={"span"} fontWeight={"bold"} color={"green.200"} mr={1}>
+                <Text as={"span"} fontWeight={"bold"} color={"#257734"} mr={1}>
                     Location: 
                 </Text>
                 {userData.location || "Not Specified"}
             </Text>
             <Text fontSize={'md'}>
-                <Text as={"span"} fontWeight={"bold"} color={"green.200"} mr={1}>
+                <Text as={"span"} fontWeight={"bold"} color={"#257734"} mr={1}>
                     Blog/Website: 
                 </Text>
                 {userData.blog ? (<a href={userData.blog} target="_blank">{userData.blog}</a>) : "Not Specified"}
             </Text>
             <Text fontSize={'md'}>
-                <Text as={"span"} fontWeight={"bold"} color={"green.200"} mr={1}>
+                <Text as={"span"} fontWeight={"bold"} color={"#257734"} mr={1}>
                     Member since: 
                 </Text>
                 {/* {userData.created_at} */}
