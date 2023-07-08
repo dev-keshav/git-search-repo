@@ -13,7 +13,7 @@ const UserProfile = ({ userData }) => {
         padding={8}
       >
         <VStack gap={5}>
-          <Avatar size={"2xl"} name={userData.name} src={userData.avatar_url} />
+          <Avatar size={"xl"} name={userData.name} src={userData.avatar_url} />
           <Button size={"sm"} colorScheme="whatsapp">
             <a href={userData.html_url} target="_blank">
               View Profile
@@ -76,4 +76,4 @@ const UserProfile = ({ userData }) => {
   );
 };
 
-export default UserProfile;
+export default UserProfile;
