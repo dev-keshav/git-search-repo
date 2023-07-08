@@ -27,7 +27,8 @@ const Search = ({setUserData, setLoading}) => {
           isClosable: true,
         });
       }
-      setUserData(data)
+      setUserData(data);
+      addUserToLocalStorage(data, query);
     } catch (error) {
       toast({
         title: "Error",
@@ -40,21 +41,39 @@ const Search = ({setUserData, setLoading}) => {
       setLoading(false)
     }
   };
+
+  const addUserToLocalStorage = (data, username) => {
+    const users = JSON.parse(localStorage.getItem('github-users')) || []
+    const userExist = users.find(user => user.id === username);
+
+    if(userExist){
+      users.splice(users.indexOf(userExist), 1)
+    }
+    users.unshift({
+      id: username,
+      avatar_url: data.avatar_url,
+      name: data.name,
+      url: data.html_url
+    });
+    localStorage.setItem("github-users", JSON.stringify(users));
+  }
   return (
     <form onSubmit={handleSubmit}>
       <Input
         variant={"outline"}
         placeholder={"Type a username"}
-        focusBorderColor="green.500"
+        focusBorderColor="#2EA043"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
       <Button
         size="md"
         type="submit"
-        colorScheme="whatsapp"
+        bg={"#2EA043"}
+        color={"white"}
         mt={4}
         disabled={!query}
+        _hover={{ bg: "#257734" }}
         opacity={!query ? 0.5 : 1}
       >
         Search
