@@ -16,7 +16,7 @@ const Navbar = () => {
                 Search History 
             </Button>
         </box>
-
+    {isOpen && <HistoryModal isOpen={isOpen} onClick={onClose} />
         
     </Flex>
   )
