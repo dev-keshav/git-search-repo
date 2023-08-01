@@ -1,3 +1,5 @@
+# Working
+This app fetches GitHub user data using the GitHub API, displaying public repositories and storing search history in the browser's local storage. It offers an efficient way for developers to explore and access GitHub projects.
 # DEMO 😉
 https://git-search-repo.vercel.app/ 
 
