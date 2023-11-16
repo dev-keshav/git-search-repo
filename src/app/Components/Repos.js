@@ -55,7 +55,7 @@ const Repos = ({ reposUrl }) => {
         .map((repo, idx) => {
           if (idx > 4 && !showMore) return null;
           return (
-            <Flex
+            <Flex className="repo_div"
               key={repo.id}
               padding={4}
               bg={"whiteAlpha.200"}
