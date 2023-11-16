@@ -5,7 +5,7 @@ import Repos from "./Repos";
 const UserProfile = ({ userData }) => {
   return (
     <>
-      <Flex
+      <Flex className="main_div"
         my={16}
         border={"2px solid"}
         borderColor={"green.500"}
@@ -21,7 +21,7 @@ const UserProfile = ({ userData }) => {
           </Button>
         </VStack>
         <VStack ml={8} alignItems={"self-start"}>
-          <Flex gap={4}>
+          <Flex gap={4} className="public_repo_div">
             <Badge fontSize={"0.9em"} colorScheme="orange">
               Public Repos: {userData.public_repos}
             </Badge>
@@ -41,7 +41,7 @@ const UserProfile = ({ userData }) => {
           <Text fontSize={'md'} fontWeight={"bold"} color={"green.500"}>
             {userData.bio}
           </Text>
-          <Box>
+          <Box className="user_detail_div">
             <Text fontSize={'md'}>
                 <Text as={"span"} fontWeight={"bold"} color={"#257734"} mr={1}>
                     Company: 
