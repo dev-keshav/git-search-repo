@@ -7,3 +7,16 @@ body{
   background: #000 !important;
   color: #fff !important;
 }
+@media (max-width: 480px){
+  .public_repo_div{
+    display: flex;
+    flex-direction: column;
+  }
+  .main_div{
+    overflow: scroll;
+  }
+  .repo_div{
+    display: flex;
+    flex-direction: column;
+  }
+}
