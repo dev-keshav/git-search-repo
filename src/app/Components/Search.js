@@ -1,6 +1,6 @@
 "use client";
-import { Button, Input, useToast } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { Button, Input, useToast, Flex } from "@chakra-ui/react";
+import React, { useState, Text } from "react";
 
 const Search = ({setUserData, setLoading}) => {
   const [query, setQuery] = useState("");
@@ -57,27 +57,29 @@ const Search = ({setUserData, setLoading}) => {
     });
     localStorage.setItem("github-users", JSON.stringify(users));
   }
+
   return (
     <form onSubmit={handleSubmit}>
-      <Input
-        variant={"outline"}
-        placeholder={"Type a username"}
-        focusBorderColor="#2EA043"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <Button
-        size="md"
-        type="submit"
-        bg={"#2EA043"}
-        color={"white"}
-        mt={4}
-        disabled={!query}
-        _hover={{ bg: "#257734" }}
-        opacity={!query ? 0.5 : 1}
-      >
-        Search
-      </Button>
+      <Flex width={500}>
+        <Input
+          variant={"outline"}
+          placeholder={"Search a Github profile"}
+          focusBorderColor="#2EA043"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <Button
+          size="md"
+          type="submit"
+          bg={"#2EA043"}
+          color={"white"}
+          disabled={!query}
+          _hover={{ bg: "#257734" }}
+          opacity={!query ? 0.5 : 1}
+        >
+          Search
+        </Button>
+      </Flex>
     </form>
   );
 };
