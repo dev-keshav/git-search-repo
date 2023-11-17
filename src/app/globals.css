@@ -7,6 +7,16 @@ body{
   background: #000 !important;
   color: #fff !important;
 }
+.header_div{
+  position: fixed;
+  width: 65vw;
+  background-color: #000;
+  z-index: 2;
+}
+.user_data_div{
+  padding-top: 300px;
+}
+
 @media (max-width: 480px){
   .public_repo_div{
     display: flex;
@@ -18,5 +28,8 @@ body{
   .repo_div{
     display: flex;
     flex-direction: column;
+  }
+  .header_div{
+    width: 90vw;
   }
 }

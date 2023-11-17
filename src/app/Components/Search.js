@@ -16,7 +16,7 @@ const Search = ({setUserData, setLoading}) => {
     try {
       const result = await fetch(`https://api.github.com/users/${query}`);
       const data = await result.json();
-      // console.log(data);
+      console.log(data);
       if (data.message) {
         return toast({
           title: "Error",
@@ -58,7 +58,7 @@ const Search = ({setUserData, setLoading}) => {
     localStorage.setItem("github-users", JSON.stringify(users));
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} >
       <Input
         variant={"outline"}
         placeholder={"Type a username"}

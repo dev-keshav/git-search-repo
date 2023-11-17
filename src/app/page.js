@@ -8,16 +8,21 @@ import UserProfile from "./Components/UserProfile";
 export default function Home() {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(false);
-  console.log(userData)
+  console.log(userData);
   return (
     <Container maxW="container.lg">
-      <Navbar />
-      <Text textAlign={"Center"} my={4}>
-        Search Users on Github
-      </Text>
-      <Search setUserData={(res) => setUserData(res)} setLoading={setLoading} />
+      <div className="header_div">
+        <Navbar />
+        <Text textAlign={"Center"}>Search Users on Github</Text>
+        <Search
+          setUserData={(res) => setUserData(res)}
+          setLoading={setLoading}
+        />
+      </div>
 
-      {userData && <UserProfile userData={userData}/>}
+      <div className="user_data_div">
+        {userData && <UserProfile userData={userData} />}
+      </div>
     </Container>
   );
 }

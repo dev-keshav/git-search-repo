@@ -6,11 +6,11 @@ const UserProfile = ({ userData }) => {
   return (
     <>
       <Flex className="main_div"
-        my={16}
+        my={0}
         border={"2px solid"}
         borderColor={"green.500"}
         borderRadius={4}
-        padding={8}
+        padding={16}
       >
         <VStack gap={5}>
           <Avatar size={"xl"} name={userData.name} src={userData.avatar_url} />

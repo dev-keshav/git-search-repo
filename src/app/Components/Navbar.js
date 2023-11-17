@@ -7,7 +7,7 @@ const Navbar = () => {
   // This is taken from Chakra 
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Flex justifyContent={'space-between'} py={6} alignItems={"Center"} >
+    <Flex justifyContent={'space-between'} py={6} alignItems={"Center"}  >
         <box>
             <Image src={"/logo.svg"} fill alt='github-logo' sx={{filter: "invert(1)", height: "75px"}} />
         </box>
