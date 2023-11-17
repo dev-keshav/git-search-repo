@@ -2,7 +2,7 @@
 import { Button, Input, useToast, Flex } from "@chakra-ui/react";
 import React, { useState, Text } from "react";
 
-const Search = ({setUserData, setLoading}) => {
+const Search = ({width, setUserData, setLoading}) => {
   const [query, setQuery] = useState("");
   const toast = useToast();
 
@@ -60,10 +60,11 @@ const Search = ({setUserData, setLoading}) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Flex width={500}>
+      <Flex>
         <Input
+          w='100%'
           variant={"outline"}
-          placeholder={"Search a Github profile"}
+          placeholder={width <= 500 ? "Search someone": "Search a Github profile"}
           focusBorderColor="#2EA043"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -77,7 +78,7 @@ const Search = ({setUserData, setLoading}) => {
           _hover={{ bg: "#257734" }}
           opacity={!query ? 0.5 : 1}
         >
-          Search
+        Search
         </Button>
       </Flex>
     </form>

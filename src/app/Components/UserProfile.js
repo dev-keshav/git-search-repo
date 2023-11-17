@@ -4,7 +4,7 @@ import Repos from "./Repos";
 
 const UserProfile = ({ userData }) => {
   return (
-    <Box marginTop={140} marginLeft={10}>
+    <Box marginTop={140} marginLeft={window.screen.width <= 500 ? 0 : 10}>
       <Flex className="main_div"
         my={16}
         border={"2px solid"}
