@@ -41,7 +41,81 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-# Contribute
-If you simply star the repo, this helps us out tremendiously. Past that, if you share this repo with your friends, that helps a lot too. If you are feeling super generous, then you can find some issues that you have with the website and try to help us with them.
+
+## 🤝 Contributing to `git-search-repo`
+If you are feeling super generous, then you can find some issues that you have with the website and try to help us with them.
+Any kind of positive contribution is welcome! Please help us to grow by contributing to the project.
+
+If you wish to contribute, you can,
+
+- Create an issue
+- Suggest a Feature
+- Test the app, and help in its improvements.
+- Improve the app, fix bugs, etc.
+- Improve documentation.
+- Create content about `git-search-repo` and share it with the world.
+🆕 New to Open Source? 💡 Follow this [guide](https://opensource.guide/how-to-contribute/) to jumpstart your Open Source journey 🚀.
+
+## 🏗️ How to Set up `git-search-repo` for Development?
+
+You may want to set up the `git-search-repo` repo for the following reasons:
+- You want to create a new feature or want to edit an existing play as a contributor.
+- You want to contribute to the `git-search-repo` repo in general by suggesting bugs, issues and improvements.
+
+- Here is a quick overview of the `git-search-repo` repo setup:
+
+### 🍴 Fork and Clone the Repo
+
+First, you need to fork the `git-search-repo` repo. You can do this by clicking the `Fork` button on the top right corner of the repo. If you are new to forking, please watch this [YouTube Guide](https://www.youtube.com/watch?v=h8suY-Osn8Q) to get started.
+
+Once forked, you can clone the repo by clicking the `Clone or Download` button on the top right corner of the forked repo.
+
+Please change the directory after cloning the repository using the `cd <folder-name>` command.
+
+### ⬇️ Install Dependencies
+Next, install the dependencies by running the following command in the `git-search-repo` repo. we recommend using `yarn` but you can install using `npm` too
+
+```bash
+yarn install
+```
+
+Or
+```
+npm install
+```
+
+if you don't have `yarn` installed on your PC, follow the steps below to install it..
+
+**Windows**
+1. open your command prompt as administrator.
+2. write `corepack enable` and hit enter.
+3. then `npm install --global yarn`
+
+**Linux**
+1. open terminal and hit `npm install --global yarn`
+
+**MacOS**
+1. open terminal and hit `npm install --global yarn`
+or
+`brew install yarn`
+
+> **Note**: `git-search-repo` runs on React 18. However, some of our dependencies are yet to upgrade to version 18. So please use the following command when you face difficulties installing the dependencies. Also, ensure to use Node.js version >= 16.x
+
+```
+npm install --legacy-peer-deps
+```
+
+### 🦄 Start the Development Mode
+
+Use the following command to start the app in the development mode:
+
+```bash
+yarn dev
+```
+or if you installed dependencies using ``npm`` use below command
+
+```
+npm run dev
+```
 
 ![github-gbd514bf0e_640](https://github.com/dev-keshav/git-search-repo/assets/71294563/d5f63d82-9451-44aa-a0c4-05d2abc0810f)
